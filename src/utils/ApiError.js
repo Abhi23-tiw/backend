@@ -1,11 +1,12 @@
-class ApiError extends Error {
+class ApiError extends Error { // ApiError inherits properties from the inbuilt error class
+
     constructor(
         statusCode,
         message= "Something went wrong ",
         error = [],
         statck = ""
     ){
-        super(message)
+        super(message) // super is used to call the constructor of the parent class
         this.statusCode = statusCode
         this.data = null
         this.message = message
